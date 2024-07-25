@@ -210,4 +210,17 @@ def yazy():
         print("It is now blue's turn!")
         blu_chooselst, blu_lst = turn(blu_chooselst,blu_lst,red_lst,2)
         all_filled = check_full(red_chooselst,blu_chooselst)
+    red_total = 0
+    blu_total = 0
+    for i in range(len(red_lst)):
+        red_total += red_lst[i]
+        blu_total += blu_lst[i]
+    print("Red's total points is: " + str(red_total) + " and Blue's total points is: " + str(blu_total) + " !")
+    if red_total > blu_total:
+        print("Congratulations! Red wins!!!")
+    elif blue_total > red_total:
+        print("Congratulations! Blue wins!!!")
+    else:
+        print("Ooh! It's a tie!!!")
+    a = input("Reopen the file to play again!")
 yazy()
